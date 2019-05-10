@@ -7,7 +7,7 @@ import { AvengersService } from './avengers.service';
 export class AvengersController {
   constructor(private readonly avengersService: AvengersService) {}
   @Get()
-  // @UseGuards(AuthGuard('bearer'))
+  @UseGuards(AuthGuard('bearer'))
   async findAll() {
     return this.avengersService.findAll();
   }

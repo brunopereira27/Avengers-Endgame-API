@@ -7,7 +7,7 @@ import { VillainsService } from './villains.service';
 export class VillainsController {
   constructor(private readonly villainsService: VillainsService) {}
   @Get()
-  // @UseGuards(AuthGuard('bearer'))
+  @UseGuards(AuthGuard('bearer'))
   async findAll() {
     return this.villainsService.findAll();
   }
