@@ -1,4 +1,5 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from 'typeorm';
+import { BattleAction } from './../battle/battle.entity';
 
 @Entity()
 export class Villain {
@@ -16,4 +17,7 @@ export class Villain {
 
   @Column('int')
   atq: number;
+
+  @OneToMany(type => BattleAction, battleAction => battleAction.villain)
+  battleActions: BattleAction[];
 }
