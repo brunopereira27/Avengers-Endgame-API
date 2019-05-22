@@ -2,8 +2,18 @@ The Avenger Endgame API
 
 ## Description
 
-`/avengers/` Gives you the list of avengers.
-`/villains/` Gives you the list of villains.
+`GET /avengers/` Gives you the list of avengers.  
+`GET /villains/` Gives you the list of villains.
+
+Not Implemented Yet  
+`POST /battles/` Creates and returns for you the result of the battle.  
+    Params:  
+    avengers: List of 3 avenger ids that compose the team of avengers for the battle  
+    villains: List of 3 villain ids that compose the team of villains for the battle  
+    
+`GET /battles/` Gives you the list of results of all previous battles already played.  
+`GET /battles/{id}` Gives you the detail of the specified battle.
+
 
 ## Installation
 
