@@ -3,7 +3,7 @@ import { AuthGuard } from '@nestjs/passport';
 
 import { BattleService } from './battle.service';
 
-@Controller('battle')
+@Controller('battles')
 export class BattleController {
   constructor(private readonly battleService: BattleService) {}
   @Get()
